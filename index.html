@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="images/fb-share.png" />
+    <meta property="og:title" content="Univesp | Mapa do Projeto" />
+    <meta property="og:description"/>
+    <title>Univesp | Mapa do Projeto</title>
+
+    <link rel="shortcut icon" href="http://engenharia.cursos.univesp.br/sites/559adb369caf4dea7a002d7a/theme/others/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
+    <!-- Icons from Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900" rel="stylesheet">
+    <!-- Social Media Sharing with Js Socials -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials-theme-plain.css" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+
+    <link rel="stylesheet" href="https://apps.univesp.br/common/rea_global.css">
+    <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css">
+    <link rel="stylesheet" href="stylesheets/custom.css">
+
+  </head>
+
+  <body>
+
+    <!-- Menu -->
+    <nav tabindex="0">
+      <div class="container">
+        <img src="https://apps.univesp.br/common/logo-univesp.svg" alt="Logo da Univesp">
+        <div id="sharing">
+          COMPARTILHE!
+          <div id="share-buttons"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- Fim do menu -->
+
+    <!-- * AQUI COMEÇA O CONTEUDO * --->
+    <main class="container-fluid" tabindex="0" style="padding:0">
+
+      <div class="container" id="intro">
+        <div class="col-md-8">
+          <h1>MAPA DO PROJETO</h1>
+		  <!--
+          <p>Você recebeu o <strong>mapa do projeto.</strong></p>
+            <p>Em cada ponto deste mapa existe um desafio relacionado à elaboração de um projeto de pesquisa. Para avançar, é preciso resolvê-los.
+            Conforme o mapa é preenchido, você visualiza seu progresso. Se chegar ao tesouro, você ganha um baú repleto de barras de ouro. </p>
+            <p>Pronto para começar?</p>
+          </p>
+		  -->
+        </div>
+      </div>
+    </div>
+
+      <div id="mapa">
+        <div class="row">
+
+          <div class="imagem col-md-4">
+            <img src="common/background_pagina.png" class="imagemT"style="width: 100%;">
+  
+            <div class="texto" style="width: 75%;">
+              <p><strong>Para navegar pelo mapa e conhecer as informações disponíveis, clique nos ícones. A cada descoberta, um novo ícone será desbloqueado. Boa viagem!</strong></p>
+              <hr>
+              <p>A elaboração de um projeto de pesquisa científica é como um mapa: é preciso seguir algumas coordenadas para se chegar ao tesouro! Ops, ao projeto.
+              Uma pesquisa bem-sucedida está diretamente ligada a um projeto de pesquisa bem definido.
+              Algumas etapas são necessárias para estruturar adequadamente o projeto, e um bom marinheiro sempre tem os instrumentos e os recursos certos para chegar com sucesso ao seu destino final.
+              Ao longo do mapa, você verá quais são os pontos aos quais precisa se atentar ao elaborar o seu projeto. Cada etapa, um desafio.</p><p>&nbsp;</p>
+              <p>Pronto para embarcar nessa jornada? Então, vamos lá!</p>
+              <p>&nbsp;</p>
+            </div>
+
+
+
+          </p>
+          </div>
+          <!--
+          <div class="texto col-md-4">
+            <p><strong>Para navegar pelo mapa e conhecer as informações disponíveis, clique nos ícones. A cada descoberta, um novo ícone será desbloqueado. Boa viagem!</strong></p>
+            <hr>
+            <p>A elaboração de um projeto de pesquisa científica é como um mapa: é preciso seguir algumas coordenadas para se chegar ao tesouro! Ops, ao projeto.
+            Uma pesquisa bem-sucedida está diretamente ligada a um projeto de pesquisa bem definido.
+            Algumas etapas são necessárias para estruturar adequadamente o projeto, e um bom marinheiro sempre tem os instrumentos e os recursos certos para chegar com sucesso ao seu destino final.
+            Ao longo do mapa, você verá quais são os pontos aos quais precisa se atentar ao elaborar o seu projeto. Cada etapa, um desafio.</p><p>&nbsp;</p>
+            <p>Pronto para embarcar nessa jornada? Então, vamos lá!</p>
+            <p>&nbsp;</p>
+          </div>-->
+		  
+          <div class="imagem col-md-8" id="image-map" style="width: 100%;" ></div>
+          <!--
+          <div class="imagem col-md-2">
+            <img src="common/hud_progresso_1.png" style="width: 80%;">
+          </div>-->
+
+        </div>
+      </div>
+
+    </main>
+    <!-- * AQUI FECHA O CONTEÚDO -->
+
+    <!-- Rodapé -->
+    <footer tabindex="0">
+      <div class="container">
+        <div id="teacher">
+          <img class="teacher-avatar" src="images/teacher_avatar.jpg" height="50" width="50" alt="Foto do professor responsável">
+          <h5>PROFESSORA RESPONSÁVEL<br/>
+          <span>Leila Rosso</span></h5>
+          <a href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+        </div>
+
+        <div id="institucional">
+          <a href="https://univesp.br/" target="_blank">
+            <img src="https://apps.univesp.br/common/logo-univesp.svg" width="100" alt="Logo da Univesp">
+          </a>
+          <h5>
+          Universidade Virtual do Estado de São Paulo<br/>
+          Avenida Escola Politécnica, 82<br/>
+          Jaguaré, São Paulo - SP<br/>
+          </h5>
+        </div>
+      </div>
+    </footer>
+    <!-- Fim do rodapé -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="javascripts/events.js"></script>
+    <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+
+    <!-- Js Socials -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.min.js"></script>
+    <script>
+    var share = $("#share-buttons");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      // shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+      shares: ["twitter", "facebook", "whatsapp", "googleplus", "email"],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + ' que a Univesp preparou: ' + page_url,
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+    </script>
+
+  </body>
+
+</html>

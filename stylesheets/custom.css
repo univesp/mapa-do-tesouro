@@ -1,0 +1,106 @@
+#intro h1 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.2em;
+  font-weight: 700;
+  font-style: italic;
+  color: DarkCyan;
+  padding: 0.5rem 0;
+}
+
+#conclusao {
+  color: white; padding: 60px 0
+}
+
+p strong { color: DarkCyan; }
+h3 {
+  font-family: 'Barlow', sans-serif;
+  font-style: italic;
+  line-height: 140%;
+  font-size: 1.2rem;
+}
+
+.leaflet-container, #mapa { background-color: #efefef }
+
+#mapa { padding: 0 15px }
+#mapa .imagem {
+  position: relative; 
+  padding: 0;
+  margin: 0;
+  background-image: url("background_mapa4.png");
+  /*background-color: #0178a2;*/
+}
+
+#mapa .imagemT {
+  position: relative; 
+  padding: 0;
+  margin: 0;
+  /*background-color: #0178a2;*/
+}
+
+#mapa .textoT {
+
+  padding: 30px 45px;
+  max-height: 550px;
+  overflow-y: scroll;
+}
+
+#mapa .texto {
+  width: 70%;
+  position: absolute; 
+  
+  top: 70px; 
+  left: 15%; 
+  right:  30%; 
+  width: 100%; 
+}
+
+#mapa .row {
+  background-image: url("background_mapa4.png");
+
+
+
+}
+
+#mapa .texto img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+#mapa .texto h6 {
+  font-size: .75rem;
+  text-align: center;
+  line-height: 120%;
+  max-width: 80%;
+  margin: auto;
+  display: block;
+}
+#image-map {
+  width: 100%;
+  height: auto;
+  border: none;
+  margin-bottom: 10px;
+}
+
+nav{height: 60px;
+
+}
+
+@media (max-width: 677px){
+  #intro { padding: 15px 30px 30px 30px }
+  #image-map { height: 250px }
+  #mapa .texto { max-height: 270px}
+  h3 { font-size: 1rem }
+  #conclusao { padding: 30px }
+}
+
+@media (max-width: 677px) and (max-height: 600px) {
+  #image-map { height: 220px }
+  #mapa .texto { height: 260px}
+  h3 { font-size: 1rem }
+  #conclusao { padding: 30px }
+}
+
+/*.leaflet-marker-icon, .overlay{ transition: .25s all }*/
