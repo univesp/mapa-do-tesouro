@@ -1,11 +1,14 @@
 #intro h1 {
-  font-family: 'Barlow', sans-serif;
-  font-size: 2.2rem;
-  line-height: 1.2em;
+  /*font-family: 'Barlow', sans-serif;*/
+  font-family: 'Tangerine', cursive;
+  font-size: 4.2rem;
+  line-height: 1.0em;
   font-weight: 700;
   font-style: italic;
-  color: DarkCyan;
+  color:#FFDF00;/* DarkCyan;*/
   padding: 0.5rem 0;
+
+  text-align: center;
 }
 
 #conclusao {
@@ -27,7 +30,8 @@ h3 {
   position: relative; 
   padding: 0;
   margin: 0;
-  background-image: url("background_mapa4.png");
+  /*background-image: url("background_mapa4.png");*/
+  background: none;  
   /*background-color: #0178a2;*/
 }
 
@@ -36,6 +40,12 @@ h3 {
   padding: 0;
   margin: 0;
   /*background-color: #0178a2;*/
+}
+#mapa{
+  background-image: url("background_mapa4.png");
+}
+#intro{
+  background: none;  
 }
 
 #mapa .textoT {
@@ -46,21 +56,27 @@ h3 {
 }
 
 #mapa .texto {
+
+  font-family: 'Permanent Marker', cursive;
+
   width: 70%;
   position: absolute; 
   
-  top: 70px; 
+  top: 8%; 
   left: 15%; 
   right:  30%; 
   width: 100%; 
-}
 
+  font-size: 1.2vw;
+  line-height: 1.3vw;
+}
+/*
 #mapa .row {
   background-image: url("background_mapa4.png");
 
 
 
-}
+}*/
 
 #mapa .texto img {
   max-width: 100%;
@@ -101,6 +117,61 @@ nav{height: 60px;
   #mapa .texto { height: 260px}
   h3 { font-size: 1rem }
   #conclusao { padding: 30px }
+}
+
+
+
+
+#seta{
+  display: none;
+}
+/*
+#overlayTest {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}*/
+
+.ui-widget-content {
+
+
+
+  background-color: #C6B39D;
+  /*padding: 5px 10px;*/
+  
+  min-height: 2vw;/* 2rem;*/
+
+  /*margin-bottom: 5px;*/
+  cursor: all-scroll;
+
+  border-style: solid;
+  border-color: #846A5D;
+
+  text-align: center;
+  vertical-align: middle;
+  padding:  1% 0;
+
+
+}
+
+.ui-widget-header {
+
+  /*padding: 5px 10px;*/
+  min-height: 2vw;
+
+  border-style: solid;
+
+
+
+
 }
 
 /*.leaflet-marker-icon, .overlay{ transition: .25s all }*/

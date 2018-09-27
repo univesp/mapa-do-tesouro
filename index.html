@@ -12,13 +12,18 @@
 
     <link rel="shortcut icon" href="http://engenharia.cursos.univesp.br/sites/559adb369caf4dea7a002d7a/theme/others/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+ 
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Icons from Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:700" rel="stylesheet"> 
     <!-- Social Media Sharing with Js Socials -->
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials-theme-plain.css" />
@@ -30,9 +35,13 @@
     <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css">
     <link rel="stylesheet" href="stylesheets/custom.css">
 
+
+
+
   </head>
 
   <body>
+
 
     <!-- Menu -->
     <nav tabindex="0">
@@ -48,27 +57,325 @@
 
     <!-- * AQUI COMEÇA O CONTEUDO * --->
     <main class="container-fluid" tabindex="0" style="padding:0">
+      
 
+
+<!--
       <div class="container" id="intro">
         <div class="col-md-8">
-          <h1>MAPA DO PROJETO</h1>
-		  <!--
+		  
           <p>Você recebeu o <strong>mapa do projeto.</strong></p>
             <p>Em cada ponto deste mapa existe um desafio relacionado à elaboração de um projeto de pesquisa. Para avançar, é preciso resolvê-los.
             Conforme o mapa é preenchido, você visualiza seu progresso. Se chegar ao tesouro, você ganha um baú repleto de barras de ouro. </p>
             <p>Pronto para começar?</p>
           </p>
-		  -->
+		  
         </div>
       </div>
+       -->
     </div>
-
+ 
       <div id="mapa">
+        <div id="intro">
+          <h1>Mapa do Projeto</h1>
+        </div>
         <div class="row">
 
-          <div class="imagem col-md-4">
-            <img src="common/background_pagina.png" class="imagemT"style="width: 100%;">
+          <div class="imagem col-md-5">
+            <img src="images/background_pagina_v2.png" class="imagemT"style="width: 100%;">
   
+
+            <div class="texto" style="width: 75%;">
+                <div id = "Enunciado">
+                    <p>
+                        Você recebeu o Mapa do Projeto. Em cada ponto deste mapa existe um desafio relacionado à elaboração de um projeto de pesquisa. Para avançar, é preciso resolvê-los. Conforme o mapa é preenchido, você visualiza seu progresso. Se chegar ao tesouro, você ganha um baú repleto de barras de ouro. 
+                    </p>
+                
+                    <p>
+                            Pronto para começar?
+                    </p>
+                
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnGar" onclick="DoHide('Garrafa');DoHide('Enunciado')">
+                
+                </div>
+                
+                
+                <div id = "Garrafa" style="display: none">
+                    <p>
+                            A elaboração de um projeto de pesquisa científica é como um mapa: é preciso seguir algumas coordenadas para se chegar ao tesouro! Ops, ao projeto. Uma pesquisa bem-sucedida está diretamente ligada a um projeto de pesquisa bem definido. Algumas etapas são necessárias para estruturar adequadamente o projeto, e um bom marinheiro sempre tem os instrumentos e os recursos certos para chegar com sucesso ao seu destino final. 
+                    </p>
+                    <p>
+                            Ao longo do mapa, você verá quais são os pontos aos quais precisa se atentar ao elaborar o seu projeto. Cada etapa, um desafio. Pronto para embarcar nessa jornada? Então, vamos lá!
+                    </p>
+                    <p>
+                            O primeiro ponto é: você sabe o que é um tema de pesquisa?         
+                    </p>
+                
+                    <table style="width:50%">
+                        <tr>
+                          <th>                            
+                            <img src="images/info1_nao.png"  style="width: 100%;" onclick="document.getElementById('btnLuneta').style.display = 'block'; document.getElementById('feedGarrafa').innerHTML='Calma! Nós explicamos: o tema de pesquisa é o pilar do seu projeto. Ele parte da observação e indagações que o levarão a encontrar as respostas em sua pesquisa científica. Siga em frente!';">
+                          </th>
+                          <th>
+                            <img src="images/info1_sim.png" style="width: 100%;" onclick="document.getElementById('btnLuneta').style.display = 'block';document.getElementById('feedGarrafa').innerHTML='Maravilha! Então, você já sabe que o tema de pesquisa parte da observação que o levará a trilhar sua pesquisa científica. Siga em frente!';">
+                          </th> 
+                        </tr>
+                    </table>
+
+                    <p id= "feedGarrafa"></p>
+                
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnLuneta" onclick="DoHide('Garrafa');DoHide('Luneta')">         
+                </div>
+                
+                
+                
+                <div id = "Luneta" style="display: none">
+                    <p>
+                            O ponto final parece estar distante, mas a luneta irá auxiliá-lo a observar ao longe. Se você já tem um tema de pesquisa, use-a para observar se ele está adequado aos seus objetivos. Se ainda não tem, use-a para explorar o ambiente e, assim, identificar e definir seu tema de pesquisa. Neste momento, guarde essas palavras: INDAGAÇÃO – CONHECIMENTO – CURIOSIDADE.
+                    </p>
+                
+                    <p>
+                            Falando nisso, o que você vê na figura abaixo?
+                    </p>
+
+                    <br>
+                    <br>
+                
+                    <img src="images/info2_girafa.png" alt="Qual Figura?" id="girafa" style="width: 50%; height: 50%">
+
+                    <input type="text" ><br>
+                    <!--<input type="submit" value="Enviar"> -->
+                    
+                
+                    <button type="button" 
+                        onclick="document.getElementById('girafa').src='images/anima_girafa.gif'; document.getElementById('btnBussola').style.display = 'block'; document.getElementById('feedLuneta').innerHTML='Você conseguiu entender como a percepção está relacionada ao ponto de vista atribuído? De acordo com os seus objetivos de pesquisa, o tema será observado de uma forma ou de outra. Cabe a você definir com clareza os objetivos e a abordagem que será utilizada.';"
+                    >Enviar</button>
+                
+                
+                    <p id= "feedLuneta"></p>
+                
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnBussola" onclick="DoHide('Bussola');DoHide('Luneta')">
+                
+                </div>
+                
+                
+                
+                <div id = "Bussola" style="display: none">
+                <p>
+                        A bússola é um instrumento de navegação que indica o norte magnético. Quando dizemos que “precisamos de um norte”, é essa a ideia: precisamos saber aonde queremos chegar e seguir por esse caminho. A fundamentação teórica, ou base científica, é o que vai sustentar o projeto de pesquisa. Quais teorias serão utilizadas para embasar seu estudo? Que autores você irá ler para explorar o que já foi discutido a respeito do seu tema de investigação?
+                </p>
+                
+                <p>
+                        Você consegue identificar qual é a definição que completa corretamente os conceitos a seguir?
+                </p>
+                <table>
+
+                    <tr>
+                      <td>
+                          <div class="ui-widget-header" id="ft"></div>
+                      </td>
+                      <td style="width:90%">
+                          Definição da linha teórica e autores que serão utilizados para construção da pesquisa.
+                          <br>
+                      </td>
+
+                    </tr>
+                    <tr>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                      <td>
+                          <div class="ui-widget-header" id="ea"></div>
+                      </td>
+                      <td>
+                          Levantamento bibliográfico sobre o que já se pesquisou ou se tem pesquisado a respeito de determinado tema.
+                      </td>
+
+                    </tr>
+
+                  <tr>
+                    
+                    <td>
+                      <div class="ui-widget-content" id="ft">Fundamentação teórica</div>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    
+                    <td>
+                      <div class="ui-widget-content" id="ea">Estado da Arte</div>
+                    </td>
+                    <td></td>
+                  </tr>
+
+                </table>
+
+                <p id= "feedBussola"></p>            
+                
+                
+                <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnNo" onclick="DoHide('Bussola');DoHide('PreNo')">
+                
+                </div>
+                
+                <div id="PreNo" style="display: none">
+                  <p>
+                    A construção organizada e sistemática do projeto passa pela “amarração” das ideias, objetivos, metodologia e
+                    fundamentação teórica. Quando tudo está relacionado, o projeto de pesquisa fica claro para quem lê. Um projeto bem
+                    estruturado tem mais chances de ser aprovado em agências de fomento à pesquisa e universidades. Lembre-se: o
+                    projeto é um documento escrito. Portanto, a linguagem utilizada deve ser clara e estar de acordo com as normas
+                    ABNT.
+                  </p>
+                  <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnNo2" onclick="DoHide('PreNo');DoHide('No')">
+                </div>
+
+                <div id="No" style="display: none">
+
+
+                  <p>
+                    Observe as citações abaixo e correlacione as colunas:
+
+                  </p>
+                  <p>
+                    1. Citação direta (CD)
+                    2. Citação indireta (CI)
+                    3. Citação de citação (CC).
+                  </p>
+                  <div class="ui-widget-content" style="width:10%; float:left" id="content-cd">CD</div>
+                  <div class="ui-widget-content" style="width:10%; float:left" id="content-cd">CD</div>
+                  <div class="ui-widget-content" style="width:10%; float:left" id="content-ci">CI</div>
+                  <div class="ui-widget-content" style="width:10%; float:left" id="content-ci">CI</div>
+                  <div class="ui-widget-content" style="width:10%; float:left" id="content-cc">CC</div>
+                  <div class="ui-widget-content" style="width:10%; float:left" id="content-cc">CC</div>
+                  <br>
+                  <br>
+                  <br>
+
+                  <div>
+                    <div class="ui-widget-header" style="width:10%; float:left" id="header-cd"></div>
+                    <p>Severino (2006) aponta que “quando se pede o resumo de um texto, o que se tem em vista é a síntese das ideias
+                    do raciocínio e não a mera redução de parágrafos. ” (p.124).</p>
+                    
+                  </div>
+                  
+                  <div>
+                      <div class="ui-widget-header" style="width:10%; float:left" id="header-ci"></div>
+                  <p>
+                    Minicucci (1987) define seminário como o lugar onde germinam as ideias lançadas.
+                  </p>
+                  </div>
+
+                  <div>
+                      <div class="ui-widget-header" style="width:10%; float:left" id="header-cc"></div>
+                  <p>
+                    Segundo Warde (1990), apud Alves-Mazzotti (2003), o conceito de pesquisa se ampliou tanto que hoje tudo cabe:
+                    “os folclores, os sensos comuns, os relatos de experiência, para não computar os desabafos emocionais e os
+                    cabotinismos. ” (p.45).
+                  </p>
+                  </div>
+
+                  <div>
+                      <div class="ui-widget-header" style="width:10%; float:left" id="header-ci"></div>
+                  <p>
+                    Umberto Eco (2008) esclarece em sua obra Como se faz uma tese, que existem alguns tipos de fichamento. Vamos
+                    focalizar dois tipos importantes: o fichamento bibliográfico e o de leitura.
+                  </p>
+                  </div>
+
+                  <p id= "feedNo"></p>
+
+                  <img src="images/info3_proximo.png" style="width: 10%; height: 10%; float:right;display: none" id="btnFarol" onclick="DoHide('Farol');DoHide('No')">
+
+
+
+
+                </div>
+                
+                
+                <div id = "Farol" style="display: none">
+                    <p>
+                            O farol ajuda o navio a se orientar pelo mar. Por meio da sua luz, os faróis apontam a entrada de portos, presença de recifes, existência de bancos de areia, dentre outras situações. Da mesma forma, a definição metodológica instrumenta o pesquisador quanto aos procedimentos que serão aplicados na pesquisa. 
+                    </p>
+                
+                    <p>
+                            Selecione o procedimento metodológico que representa uma pesquisa de abordagem qualitativa:
+                    </p>
+                
+                  <table style="width:90%">
+                    <tr>
+                      <th>  
+                        <button type="button" id="btnFarol1" onclick="
+                            document.getElementById('btnFarol2').disabled = true; 
+                            document.getElementById('btnTimao').style.display = 'block';
+                            document.getElementById('feedFarol').innerHTML='Errado... Não deixe de estudar esse tópico ao desenvolver sua pesquisa. Avance no mapa';
+                          ">
+                          Busca resultados que são mensuráveis a partir de amostras, que devem ser definidas baseadas nos objetivos de pesquisa.
+                        </button>
+                      </th>
+                      <th>
+                        <button type="button" id="btnFarol2" onclick="
+                            document.getElementById('btnFarol1').disabled = true;
+                            document.getElementById('btnTimao').style.display = 'block';
+                            document.getElementById('feedFarol').innerHTML='Muito bem! Você está mais próximo do tesouro. Avance.';
+                          ">
+                          Busca resultados a partir da interpretação de contextos e das experiências dos sujeitos.
+                        </button>
+                      </th>
+                    </tr>
+
+                  </table>
+                
+                
+                
+                
+                    <p id="feedFarol"></p>
+                
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnTimao" onclick="DoHide('Farol');DoHide('Timao')">
+                
+                </div>
+                
+                
+                <div id = "Timao" style="display: none">
+                  <p>
+                    Escrever é como navegar. Às vezes o mar está tranquilo e a escrita flui rapidamente. Em outros momentos, de maré
+                    agitada, as palavras parecem não sair da forma como imaginamos. Isso é comum e você não deve se preocupar nos
+                    momentos em que a escrita do projeto parece não evoluir. Procure reler seus objetivos, o problema de pesquisa, a
+                    justificativa: lembre-se de que tudo deve estar conectado. E, o mais importante: leia muito. Leia os autores que
+                    selecionou para compor a fundamentação teórica, leia como eles abordam o tema e como eles defendem suas ideias em
+                    seus textos.
+                  </p>
+                  <p> 
+                    Escrever um projeto de pesquisa não é fácil, mas já diz o ditado: “mar calmo nunca fez bom marinheiro”.
+                  </p>
+                
+                    <img src="images/info6_marinheiro.png"  width="50%" height="50%">
+                    <br>
+                    
+                
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnBau" onclick="DoHide('Bau');DoHide('Timao')">
+                
+                </div>
+                
+                
+              <div id="Bau" style="display: none">
+                <p>
+                  Para buscar um tesouro, é preciso passar por várias etapas: preparar o barco e a equipe, ajustar as velas e o timão
+                  para chegar ao seu destino, guiar-se pelos faróis e mapas...
+                </p>
+                <p>
+                  A elaboração de um projeto de pesquisa também é assim: necessita passar pela escolha do tema, definição teórica e
+                  metodológica, organização de ideias e escrita sistemática.
+                </p>
+                <p>
+                  Ao fim de ambas as jornadas, você será recompensado – seja com um baú de barras de ouro ou com um projeto que
+                  comunique ao mundo suas ideias e contribuições científicas.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!--
             <div class="texto" style="width: 75%;">
               <p><strong>Para navegar pelo mapa e conhecer as informações disponíveis, clique nos ícones. A cada descoberta, um novo ícone será desbloqueado. Boa viagem!</strong></p>
               <hr>
@@ -78,7 +385,7 @@
               Ao longo do mapa, você verá quais são os pontos aos quais precisa se atentar ao elaborar o seu projeto. Cada etapa, um desafio.</p><p>&nbsp;</p>
               <p>Pronto para embarcar nessa jornada? Então, vamos lá!</p>
               <p>&nbsp;</p>
-            </div>
+            </div>-->
 
 
 
@@ -96,7 +403,11 @@
             <p>&nbsp;</p>
           </div>-->
 		  
-          <div class="imagem col-md-8" id="image-map" style="width: 100%;" ></div>
+          <div class="imagem col-md-7" id="image-map" style="width: 100%;" >
+          
+              <!--<img class="overlayTest" src="images/anima_bau.gif" >-->
+          
+          </div>
           <!--
           <div class="imagem col-md-2">
             <img src="common/hud_progresso_1.png" style="width: 80%;">
@@ -130,11 +441,11 @@
         </div>
       </div>
     </footer>
-    <!-- Fim do rodapé -->
+    <!-- Fim do rodapé 
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script src="javascripts/events.js"></script>
@@ -160,6 +471,50 @@
       shareIn: "popup",
     });
     </script>
+
+  <script>
+    function DoHide( _id) {
+      var x = document.getElementById(_id);
+      if (x.style.display === "none") {
+      x.style.display = "block";
+      } else {
+      x.style.display = "none";
+      }
+    }
+  </script>
+
+<script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+
+        ui.draggable.position( { of: $(this), my: 'center center', at: 'center center' } );
+        //$(this) = false;
+      }
+    });
+  } );
+
+
+    $( function() {
+    $( "#draggable1" ).draggable();
+    $( "#droppable1" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+
+        ui.draggable.position( { of: $(this), my: 'center center', at: 'center center' } );
+        //$(this) = false;
+      }
+    });
+  } );
+  </script>
 
   </body>
 

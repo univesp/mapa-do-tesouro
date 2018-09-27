@@ -30,9 +30,15 @@ $(document).ready(function(){
   map.fitBounds([[-20,160], [-260,460]])
 
   // dimensions of the image
-  var w = 4245,
-      h = 2160,
-      url = 'common/background_mapa3.png';
+  var w = 2874,
+      h = 1608,
+      w2 = 5439,
+      h2 = 1600,
+      url = 'common/background_mapa3_v2.png',
+      url2 = 'images/anima_bau.gif';
+
+      minusx = -1400;
+      minusy = -200;
   // var w = 5408,
   //     h = 2752,
   //     url = 'images/mapa.png';
@@ -42,21 +48,36 @@ $(document).ready(function(){
   var northEast = map.unproject([w, 0], map.getMaxZoom()-1);
   var bounds = new L.LatLngBounds(southWest, northEast);
 
+  var southWest2 = map.unproject([minusx, h2+minusy], map.getMaxZoom()-1);
+  var northEast2 = map.unproject([w2+minusx, minusy], map.getMaxZoom()-1);
+  var bounds2 = new L.LatLngBounds(southWest2, northEast2);
+
   // add the image overlay,
   // so that it covers the entire map
   L.imageOverlay(url, bounds).addTo(map);
+  //L.imageOverlay(url2, bounds2).addTo(map);
 
   // tell leaflet that the map is exactly as big as the image
   map.setMaxBounds(bounds);
 
+/*
+  anima_bau.gif
+  var iconCaravela = L.icon({
+    iconUrl: 'images/hud_botao_garrafa.png',
+    iconSize:     [203, 212], // size of the icon
+    iconAnchor:   [200, 300], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76], // point from which the popup should open relative to the iconAnchor
+    className: 'garrafa'
+});*/
+
 
   //ÍCONES
   var iconCaravela = L.icon({
-      iconUrl: 'images/icon1_caravela.gif',
-      iconSize:     [60, 59], // size of the icon
-      iconAnchor:   [40, 80], // point of the icon which will correspond to marker's location
+      iconUrl: 'images/icon2_cana.gif',
+      iconSize:     [453, 160], // size of the icon
+      iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
       popupAnchor:  [-3, -76], // point from which the popup should open relative to the iconAnchor
-      className: 'caravela'
+      className: 'garrafa'
   });
 
   var iconCana = L.icon({
@@ -106,21 +127,54 @@ $(document).ready(function(){
       popupAnchor:  [-3, -76], // point from which the popup should open relative to the iconAnchor
       className: 'bateia'
   });
-
+/*
   var caravelamark = L.marker([-125, 240], {icon: iconCaravela}).addTo(map);
   var canamark = L.marker([-119, 373], {icon: iconCana}).addTo(map);
   var rodamark = L.marker([-180, 200], {icon: iconRoda}).addTo(map);
   var ouromark = L.marker([-205, 192], {icon: iconOuro}).addTo(map);
   var correntesmark = L.marker([-197, 194], {icon: iconCorrentes}).addTo(map);
   var canoamark = L.marker([-203, 176], {icon: iconCanoa}).addTo(map);
-  var bateiamark = L.marker([-190, 180], {icon: iconBateia}).addTo(map);
+  var bateiamark = L.marker([-190, 180], {icon: iconBateia}).addTo(map);*/
 
   //IMAGE OVERLAY
   //http://leafletjs.com/reference-1.2.0.html#imageoverlay
-  var imageUrl = 'images/layer-1caravela-colonias.png',
-      imageBounds = bounds;
-  L.imageOverlay(imageUrl, imageBounds, {className: " overlay colonias"}).addTo(map);
+  
 
+
+
+  
+
+    var imageUrl = 'images/anima_garrafa.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifGarrafa"}).addTo(map);
+
+    var imageUrl = 'images/anima_luneta.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifLuneta"}).addTo(map);
+
+    var imageUrl = 'images/anima_bussola.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifBussola"}).addTo(map);
+
+    var imageUrl = 'images/anima_no.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifNo"}).addTo(map);
+
+    var imageUrl = 'images/anima_farol.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifFarol"}).addTo(map);
+
+
+    var imageUrl = 'images/anima_timao.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifTimao"}).addTo(map);
+
+    var imageUrl = 'images/anima_bau.gif',
+    imageBounds = bounds2;
+    L.imageOverlay(imageUrl, imageBounds, {className: " overlay gifBau"}).addTo(map);
+
+    
+/*
   var imageUrl = 'images/layer-1caravela-rotas.png',
       imageBounds = bounds;
   L.imageOverlay(imageUrl, imageBounds, {className: " overlay rotas"}).addTo(map);
@@ -143,11 +197,50 @@ $(document).ready(function(){
 
   var imageUrl = 'images/layer-6canoa-rioparana.png',
       imageBounds = bounds;
-  L.imageOverlay(imageUrl, imageBounds, {className: " overlay rio-parana"}).addTo(map);
+  L.imageOverlay(imageUrl, imageBounds, {className: " overlay rio-parana"}).addTo(map);*/
 
   //CONTROLES
   var area_texto = $("#mapa .texto");
+  
   $('.leaflet-marker-icon:not(:first-child)').hide();
+
+
+
+
+    
+
+
+  //$(document).ready(function(){
+    $('#btnGar').click(function(){
+        $('.gifGarrafa').fadeIn();
+    });
+  //});
+
+    $('#btnLuneta').click(function(){
+        $('.gifLuneta').fadeIn();
+    });
+
+    $('#btnBussola').click(function(){
+        $('.gifBussola').fadeIn();
+    });
+
+    $('#btnNo').click(function(){
+        $('.gifNo').fadeIn();
+    });
+
+    $('#btnFarol').click(function(){
+        $('.gifFarol').fadeIn();
+    });
+
+    $('#btnTimao').click(function(){
+        $('.gifTimao').fadeIn();
+    });
+
+    $('#btnBau').click(function(){
+        $('.gifBau').fadeIn();
+    });
+  
+
   $('.leaflet-marker-icon').on('click', function(){
     $('.overlay').hide();
     $(this).css('opacity','.5');
@@ -155,13 +248,13 @@ $(document).ready(function(){
   })
   $('.overlay').hide();
 
-  caravelamark.on('click', function(){
-    map.flyToBounds([[-80,160], [-240,460]])
+  /*caravelamark.on('click', function(){
+    //map.flyToBounds([[-80,160], [-240,460]])
     $('.colonias, .rotas').fadeIn();
     area_texto.empty().append("<p>Ao longo do século XV, ocorreu a expansão portuguesa e a conquista da costa ocidental africana. Em 1498, a expedição de Vasco da Gama e a passagem pelo Cabo da Boa Esperança em direção à Índia possibilitou o desenvolvimento da navegação e da conquista também asiática.</p><p>Isso permitiu a <strong>circulação de saberes, vegetais, animais e minerais, empreendidos pelos fluxos migratórios ou pelas transações comerciais entre Europa, América, Ásia e África</strong>.</p><p>No século XVI, a dinâmica colonial altera-se, com foco na exploração do comércio das especiarias no Oriente, como o Cravo, a Canela, a pimenta, a noz-moscada etc.</p>");
-    $('.cana').delay(2000).fadeIn();
-  });
-
+    $('.bau').fadeIn();
+  });*/
+/*
   canamark.on('click', function(){
     map.flyToBounds([[-80,160], [-240,460]])
     $('.plantas').fadeIn();
@@ -200,7 +293,7 @@ $(document).ready(function(){
   bateiamark.on('click', function(){
     map.flyToBounds([[-80,160], [-240,460]])
     area_texto.empty().append("<p>Essa exploração dos minérios e territórios brasileiros só foi possível graças à circulação de saberes e às contribuições africana e indígena. Assim, a técnica e a ciência brasileiras, o conhecimento dos territórios do interior do país e o desenvolvimento da economia no Brasil colônia não se originam apenas nos colonizadores, mas em todos os povos que contribuíram para a formação nacional.</p>");
-  });
+  });*/
 
   $("#intro .seta").on("click", function(){
     $('html, body').animate({
@@ -208,4 +301,106 @@ $(document).ready(function(){
     }, 'slow');
   })
 
+
+
+  $( "#Bussola .ui-widget-content"  ).draggable({ revert: true, stack: "div" }); /*revert:"invalid"*/
+
+  /*
+  $('#header-ft').droppable({ accept: "#content-ft,#content-ea" });
+  $('#header-ea').droppable({ accept: "#content-ft,#content-ea" });
+*/
+
+
+  $( "#No .ui-widget-content"  ).draggable({ revert: true, stack: "div" }); /*revert:"invalid"*/
+
+  /*$( ".ui-widget-content-cc"  ).draggable({ revert: true, stack: "div" });*/
+
+  $('#header-cc').droppable({ accept: "#content-cc" });
+  $('#header-cd').droppable({ accept: "#content-cd" });
+  $('#header-ci').droppable({ accept: "#content-ci" });
+
+
+
+
+
+  $('#Bussola .ui-widget-header').each(function(index){
+    $(this).droppable({
+      drop: function( event, ui ) {
+
+        
+
+        if(ui.draggable.attr("id") == this.id){
+            val_contador_bussola++;
+        }else{
+            val_contador_bussola --;
+        }
+        paginaBussola();
+
+        /*
+        if(ui.draggable.attr("id")=="content-ft"){
+            alert("oi");
+        }
+        alert(ui.draggable.attr("id"));
+        */
+
+        //celso
+    //     ui.draggable.addClass( 'correct' );
+    // ui.draggable.draggable( 'disable' );
+     //$(this).droppable( 'disable' ); /*this*/
+        ui.draggable.position( { of: $(this), my: 'center center', at: 'center center' } );
+
+    // ui.draggable.draggable( 'option', 'revert', false );
+    //fim celso
+        //----eventos_contador(val_contador_skinner, contador_skinner, $("#v-pills-skinner"), $("#v-pills-skinner-tab"), $("#v-pills-piaget-tab div"));
+
+        $(this) = false;
+        //$(this).droppable = false;
+      }
+    });
+  });
+
+  var val_contador_no = 0;
+  var val_contador_bussola = 0;
+
+
+
+  $('#No .ui-widget-header').each(function(index){
+    $(this).droppable({
+      drop: function( event, ui ) {
+
+        val_contador_no = val_contador_no + 1;
+
+        //celso
+    //     ui.draggable.addClass( 'correct' );
+    // ui.draggable.draggable( 'disable' );
+     //$(this).droppable( 'disable' ); /*this*/
+        ui.draggable.position( { of: $(this), my: 'center center', at: 'center center' } );
+
+    // ui.draggable.draggable( 'option', 'revert', false );
+    //fim celso
+        //----eventos_contador(val_contador_skinner, contador_skinner, $("#v-pills-skinner"), $("#v-pills-skinner-tab"), $("#v-pills-piaget-tab div"));
+        paginaNo();
+        $(this).droppable = false;
+        $(this) = false;
+        
+      }
+    });
+  });
+
+  function paginaNo(){
+      if (val_contador_no >= 4) {
+          document.getElementById("btnFarol").style.display = "block";
+          document.getElementById("feedNo").innerHTML = "Correto! Avance no mapa.";
+      }
+  }
+
+  function paginaBussola(){
+      if (val_contador_bussola>=2){
+        document.getElementById("btnNo").style.display = "block";
+        document.getElementById("feedBussola").innerHTML = "Correto! Avance no mapa.";
+      }else if(val_contador_bussola<=-2){
+        document.getElementById("btnNo").style.display = "block";
+        document.getElementById("feedBussola").innerHTML = "Errado... Aprofunde-se neste tópico quando for elaborar seu projeto de pesquisa. Avance no mapa.";
+      }
+  }
 })
