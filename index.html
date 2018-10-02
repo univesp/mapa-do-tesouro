@@ -5,17 +5,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="images/fb-share.png" />
-    <meta property="og:title" content="Univesp | Mapa do Projeto" />
-    <meta property="og:description"/>
+    <meta property="og:image" content="images/fb-share.png">
+    <meta property="og:title" content="Univesp | Mapa do Projeto">
+    <meta property="og:description">
     <title>Univesp | Mapa do Projeto</title>
 
     <link rel="shortcut icon" href="http://engenharia.cursos.univesp.br/sites/559adb369caf4dea7a002d7a/theme/others/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
     <!-- Icons from Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine:700" rel="stylesheet"> 
+    
     <!-- Social Media Sharing with Js Socials -->
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials-theme-plain.css" />
@@ -31,7 +34,7 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
 
-    <link rel="stylesheet" href="https://apps.univesp.br/common/rea_global.css">
+    <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-1.1.css">
     <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css">
     <link rel="stylesheet" href="stylesheets/custom.css">
 
@@ -45,14 +48,16 @@
 
     <!-- Menu -->
     <nav tabindex="0">
-      <div class="container">
-        <img src="https://apps.univesp.br/common/logo-univesp.svg" alt="Logo da Univesp">
-        <div id="sharing">
-          COMPARTILHE!
-          <div id="share-buttons"></div>
+        <div class="container">
+          <a href="https://univesp.br/" target="_blank">
+            <img src="https://apps.univesp.br/common/logo-univesp-colorido.svg" alt="Logo da Univesp">
+          </a>
+          <div id="sharing">
+            COMPARTILHE!
+            <div id="share-buttons" class="jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-facebook"><a href="#" class="jssocials-share-link"><i class="fa fa-facebook jssocials-share-logo"></i></a></div><div class="jssocials-share jssocials-share-twitter"><a href="#" class="jssocials-share-link"><i class="fa fa-twitter jssocials-share-logo"></i></a></div><div class="jssocials-share jssocials-share-whatsapp"><a target="_self" href="whatsapp://send?text=file%3A%2F%2F%2FC%3A%2FUsers%2Ftales.mariano%2FDocuments%2Fgit%2Fmapa-do-tesouro%2Fmapa-do-tesouro%2Findex.html Confira%20o%20REA%20Univesp%20%7C%20Mapa%20do%20Projeto." class="jssocials-share-link"><i class="fa fa-whatsapp jssocials-share-logo"></i></a></div><div class="jssocials-share jssocials-share-email"><a target="_self" href="mailto:?subject=Confira%20o%20REA%20Univesp%20%7C%20Mapa%20do%20Projeto.&amp;body=file%3A%2F%2F%2FC%3A%2FUsers%2Ftales.mariano%2FDocuments%2Fgit%2Fmapa-do-tesouro%2Fmapa-do-tesouro%2Findex.html" class="jssocials-share-link"><i class="fa fa-at jssocials-share-logo"></i></a></div></div></div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     <!-- Fim do menu -->
 
     <!-- * AQUI COMEÇA O CONTEUDO * --->
@@ -60,26 +65,19 @@
       
 
 
-<!--
-      <div class="container" id="intro">
-        <div class="col-md-8">
-		  
-          <p>Você recebeu o <strong>mapa do projeto.</strong></p>
-            <p>Em cada ponto deste mapa existe um desafio relacionado à elaboração de um projeto de pesquisa. Para avançar, é preciso resolvê-los.
-            Conforme o mapa é preenchido, você visualiza seu progresso. Se chegar ao tesouro, você ganha um baú repleto de barras de ouro. </p>
-            <p>Pronto para começar?</p>
-          </p>
-		  
-        </div>
-      </div>
-       -->
-    </div>
+      
  
       <div id="mapa">
-        <div id="intro">
-          <h1>Mapa do Projeto</h1>
-        </div>
+
+          <div id="intro">
+              <h1>Mapa do Projeto</h1>
+            </div>
+
         <div class="row">
+
+            <img src="images/background_mapa3_v3.png" class="imagemBack" style="width: 100%;position: absolute;">
+            <img  id="gifs" class="imagemBack" style="width: 100%;position: absolute;">
+
 
           <div class="imagem col-md-5">
             <img src="images/background_pagina_v2.png" class="imagemT"style="width: 100%;">
@@ -88,15 +86,21 @@
             <div class="texto" style="width: 75%;">
                 <div id = "Enunciado">
                     <p>
-                        Você recebeu o Mapa do Projeto. Em cada ponto deste mapa existe um desafio relacionado à elaboração de um projeto de pesquisa. Para avançar, é preciso resolvê-los. Conforme o mapa é preenchido, você visualiza seu progresso. Se chegar ao tesouro, você ganha um baú repleto de barras de ouro. 
+                        Você recebeu o Mapa do Projeto. Em cada ponto deste mapa existe um desafio relacionado à elaboração de um projeto de pesquisa.
+                    </p>
+              
+                    <p>
+                        Para avançar, é preciso resolvê-los. Conforme o mapa é preenchido, você visualiza seu progresso. Se chegar ao tesouro, você ganha um baú repleto de barras de ouro. 
                     </p>
                 
                     <p>
                             Pronto para começar?
                     </p>
-                
-                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnGar" onclick="DoHide('Garrafa');DoHide('Enunciado')">
-                
+
+                    <button type="button" style="float:right" id="btnGar" onclick="HideAll();TagHide('Garrafa')">Iniciar</button>
+                    <!--
+                    <img src="images/info3_proximo.png" style="width: 10%; height: 10%; float:right" id="btnGar" onclick="TagHide('Garrafa');TagHide('Enunciado')">
+                    -->
                 </div>
                 
                 
@@ -124,7 +128,7 @@
 
                     <p id= "feedGarrafa"></p>
                 
-                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnLuneta" onclick="DoHide('Garrafa');DoHide('Luneta')">         
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnLuneta" onclick=" HideAll();TagHide('Luneta')">         
                 </div>
                 
                 
@@ -135,10 +139,9 @@
                     </p>
                 
                     <p>
-                            Falando nisso, o que você vê na figura abaixo?
+                            Falando nisso,  que você vê na janela abaixo?
                     </p>
 
-                    <br>
                     <br>
                 
                     <img src="images/info2_girafa.png" alt="Qual Figura?" id="girafa" style="width: 50%; height: 50%">
@@ -154,7 +157,7 @@
                 
                     <p id= "feedLuneta"></p>
                 
-                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnBussola" onclick="DoHide('Bussola');DoHide('Luneta')">
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnBussola" onclick="HideAll();TagHide('Bussola')">
                 
                 </div>
                 
@@ -213,24 +216,27 @@
                 <p id= "feedBussola"></p>            
                 
                 
-                <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnNo" onclick="DoHide('Bussola');DoHide('PreNo')">
+                <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnNo" onclick=" HideAll();TagHide('PreNo')">
                 
                 </div>
                 
                 <div id="PreNo" style="display: none">
-                  <p>
-                    A construção organizada e sistemática do projeto passa pela “amarração” das ideias, objetivos, metodologia e
-                    fundamentação teórica. Quando tudo está relacionado, o projeto de pesquisa fica claro para quem lê. Um projeto bem
-                    estruturado tem mais chances de ser aprovado em agências de fomento à pesquisa e universidades. Lembre-se: o
-                    projeto é um documento escrito. Portanto, a linguagem utilizada deve ser clara e estar de acordo com as normas
-                    ABNT.
-                  </p>
-                  <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnNo2" onclick="DoHide('PreNo');DoHide('No')">
-                </div>
-
+                    <p>
+                      A construção organizada e sistemática do projeto passa pela “amarração” das ideias, objetivos, metodologia e
+                      fundamentação teórica.
+                    </p>
+                    <p>
+                      Quando tudo está relacionado, o projeto de pesquisa fica claro para quem lê. Um projeto bem
+                      estruturado tem mais chances de ser aprovado em agências de fomento à pesquisa e universidades.
+                    </p>
+                    <p> Lembre-se: o
+                      projeto é um documento escrito. Portanto, a linguagem utilizada deve ser clara e estar de acordo com as normas
+                      ABNT.
+                    </p>
+                    <img src="images/info3_proximo.png" style="width: 10%; height: 10%; float:right" id="btnNo2" onclick=" HideAll();TagHide('No')">
+                  </div>
+                
                 <div id="No" style="display: none">
-
-
                   <p>
                     Observe as citações abaixo e correlacione as colunas:
 
@@ -281,9 +287,9 @@
                   </p>
                   </div>
 
-                  <p id= "feedNo"></p>
+                  <p id= "feedNo" style=" float:left"></p>
 
-                  <img src="images/info3_proximo.png" style="width: 10%; height: 10%; float:right;display: none" id="btnFarol" onclick="DoHide('Farol');DoHide('No')">
+                  <img src="images/info3_proximo.png" style="width: 10%; height: 10%; float:right;display: none" id="btnFarol" onclick="HideAll();TagHide('Farol')">
 
 
 
@@ -329,7 +335,7 @@
                 
                     <p id="feedFarol"></p>
                 
-                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnTimao" onclick="DoHide('Farol');DoHide('Timao')">
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right;display: none" id="btnTimao" onclick=" HideAll();TagHide('Timao')">
                 
                 </div>
                 
@@ -347,11 +353,11 @@
                     Escrever um projeto de pesquisa não é fácil, mas já diz o ditado: “mar calmo nunca fez bom marinheiro”.
                   </p>
                 
-                    <img src="images/info6_marinheiro.png"  width="50%" height="50%">
+                    <img src="images/info6_marinheiro.png"  width="85%" >
                     <br>
                     
                 
-                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnBau" onclick="DoHide('Bau');DoHide('Timao')">
+                    <img src="images/info3_proximo.png"  style="width: 10%; height: 10%; float:right" id="btnBau" onclick="HideAll();TagHide('Bau')">
                 
                 </div>
                 
@@ -370,7 +376,7 @@
                   comunique ao mundo suas ideias e contribuições científicas.
 
                 </p>
-
+                <img src="images/info7_navegar.png"  width="85%" >
               </div>
 
             </div>
@@ -402,12 +408,13 @@
             <p>Pronto para embarcar nessa jornada? Então, vamos lá!</p>
             <p>&nbsp;</p>
           </div>-->
-		  
+		  <!--
           <div class="imagem col-md-7" id="image-map" style="width: 100%;" >
           
               <!--<img class="overlayTest" src="images/anima_bau.gif" >-->
           
-          </div>
+          <!--</div>-->
+          
           <!--
           <div class="imagem col-md-2">
             <img src="common/hud_progresso_1.png" style="width: 80%;">
@@ -420,70 +427,146 @@
     <!-- * AQUI FECHA O CONTEÚDO -->
 
     <!-- Rodapé -->
-    <footer tabindex="0">
-      <div class="container">
-        <div id="teacher">
-          <img class="teacher-avatar" src="images/teacher_avatar.jpg" height="50" width="50" alt="Foto do professor responsável">
-          <h5>PROFESSORA RESPONSÁVEL<br/>
-          <span>Leila Rosso</span></h5>
-          <a href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+    <footer tabindex="0" class="fixed">
+        <div class="container">
+          <div class="cred-rea">
+            <p>
+              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#Creditos">
+                Créditos
+              </button>
+            </p>
+            <p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a>
+            </p>
+          </div>
+          <div class="aval-rea">
+            <!-- Atualizar "Nome+do+Recurso" -->
+            <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSfAHCP0GUkdy6poziOeLdwTOrissnTpo-dUCC-br7Q8U5isbg/viewform?usp=pp_url&amp;entry.542052009=Nome+do+Recurso" target="_blank">Avaliar este recurso</a>
+            <!-- Atualizar "Nome+do+Recurso" -->
+            <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScEuhyIW4Tt3k9BjyxshDlzUO7hbSWCigLOUn-l56YvTYJ-wg/viewform?usp=pp_url&amp;entry.1523910789=Nome+do+Recurso" target="_blank">Reportar erro</a>
+          </div>
         </div>
+      </footer>
 
-        <div id="institucional">
-          <a href="https://univesp.br/" target="_blank">
-            <img src="https://apps.univesp.br/common/logo-univesp.svg" width="100" alt="Logo da Univesp">
-          </a>
-          <h5>
-          Universidade Virtual do Estado de São Paulo<br/>
-          Avenida Escola Politécnica, 82<br/>
-          Jaguaré, São Paulo - SP<br/>
-          </h5>
+      <!-- Créditos -->
+      <div class="modal fade" id="Creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+    
+                <h6>Governo do Estado de São Paulo</h6>
+                <p>Secretaria de Desenvolvimento Econômico, Ciência, Tecnologia e Inovação</p>
+    
+                <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+                <p><span class="funcao">Presidente</span>Fernanda Gouveia</p>
+                <p><span class="funcao">Diretora Acadêmica</span>Cleide Nébias</p>
+                <p><span class="funcao">Diretor Administrativo</span>Carlos Augusto Freixo Corte Real</p>
+    
+                <h6>Equipe</h6>
+                <p><span class="funcao">Docente responsável</span>Leila Rosso</p>
+                <p><span class="funcao">Coordenação</span>Juliana Hampel</p>
+                <p><span class="funcao">Ilustração</span>Gabriel Seiji Kinoshita</p>
+                <p><span class="funcao">Layout</span>Gabriel Seiji Kinoshita</p>
+                <p><span class="funcao">Programação</span>Tales Mariano</p>
+                <p><span class="funcao">Planejamento e Design Instrucional</span>Nádia Rubio Pirillo</p>
+                <p><span class="funcao">Colaboração</span>Aparecida Azevedo, Édison Trombeta, Natália Fernandes e Natasha Higa</p>
+    
+              </div>
+              <div class="modal-footer">
+                <p>Maio/2018</p>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
-    <!-- Fim do rodapé 
+    <!-- Fim do rodapé -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  
 
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+      
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 
-    <script src="javascripts/events.js"></script>
+    
     <script src="https://apps.univesp.br/common/analytics.js"></script>
 
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
 
-    <!-- Js Socials -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.min.js"></script>
-    <script>
-    var share = $("#share-buttons");
-    var page_title = $(document).attr('title');
-    var page_url = window.location.href;
-    share.jsSocials({
-      // shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
-      shares: ["twitter", "facebook", "whatsapp", "googleplus", "email"],
-      url: page_url,
-      text: 'Confira o REA ' + page_title + ' que a Univesp preparou: ' + page_url,
-      showLabel: false,
-      showCount: false,
-      shareIn: "popup",
-    });
-    </script>
+
+
+
+
+
+
+
+  <!-- Js Socials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.min.js"></script>
+  <script>
+  var share = $("#share-buttons");
+  var page_title = $(document).attr('title');
+  var page_url = window.location.href;
+  share.jsSocials({
+    // shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+    shares: ["facebook", "twitter", "whatsapp", "email"],
+    url: page_url,
+    text: 'Confira o REA ' + page_title + '.',
+    showLabel: false,
+    showCount: false,
+    shareIn: "popup",
+  });
+  </script>
+
+  <!-- Custom JS -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+
+
+  <!-- OUTROS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://apps.univesp.br/common/posiciona-rodape.js"></script>
 
   <script>
-    function DoHide( _id) {
+
+    function TagHide( _id) {
       var x = document.getElementById(_id);
-      if (x.style.display === "none") {
+      //if (x.style.display === "none") {
       x.style.display = "block";
-      } else {
-      x.style.display = "none";
-      }
+      //} else {
+     // x.style.display = "none";
+      //}
+    }
+
+    function HideAll() {
+      document.getElementById("Enunciado").style.display = "none";
+      document.getElementById("Garrafa").style.display = "none";
+      document.getElementById("Luneta").style.display = "none";
+      document.getElementById("Bussola").style.display = "none";
+      document.getElementById("PreNo").style.display = "none";
+      document.getElementById("No").style.display = "none";
+      document.getElementById("Farol").style.display = "none";
+      document.getElementById("Timao").style.display = "none";
+      document.getElementById("Bau").style.display = "none";
     }
   </script>
 
-<script>
+<script>/*
   $( function() {
     $( "#draggable" ).draggable();
     $( "#droppable" ).droppable({
@@ -514,8 +597,10 @@
       }
     });
   } );
-  </script>
+  */</script>
 
   </body>
+
+  <script src="javascripts/events.js"></script>
 
 </html>

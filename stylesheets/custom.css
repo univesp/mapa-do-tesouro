@@ -5,10 +5,17 @@
   line-height: 1.0em;
   font-weight: 700;
   font-style: italic;
-  color:#FFDF00;/* DarkCyan;*/
+  color:white;/* DarkCyan;*/
   padding: 0.5rem 0;
 
   text-align: center;
+
+/*
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  */
 }
 
 #conclusao {
@@ -70,13 +77,16 @@ h3 {
   font-size: 1.2vw;
   line-height: 1.3vw;
 }
-/*
-#mapa .row {
-  background-image: url("background_mapa4.png");
 
 
+.row {
+  background-image: url("background_mapa3_v2.png");
 
-}*/
+  
+  background-repeat: no-repeat;
+  background-position: right top;
+
+}
 
 #mapa .texto img {
   max-width: 100%;
